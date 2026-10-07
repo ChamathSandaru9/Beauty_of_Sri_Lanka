@@ -1,0 +1,111 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #1b4332;
+}
+.logo-img {
+  height: 50px;
+  width: auto;
+  max-height: 100%;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.logo-text strong {
+  font-weight: 700;
+}
+
+/* Navigation */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #1b7a4b;
+}
+
+/* Explore Button */
+
+.explore-btn {
+  text-decoration: none;
+  background: #1b7a4b;
+  color: white;
+
+  padding: 11px 20px;
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #145c38;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .navbar {
+    gap: 15px;
+  }
+
+  .explore-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+}

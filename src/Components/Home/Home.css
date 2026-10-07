@@ -1,0 +1,164 @@
+/* body{
+    background-color: black;
+    color: whitesmoke;
+}
+.carousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 86px
+}
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+} */
+ body {
+  background-color: black;
+  color: whitesmoke;
+}
+
+/* Hero Slider */
+.carousel {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 86px;
+  box-sizing: border-box;
+}
+
+/* Slider Image */
+.img {
+  width: 100%;
+  height: calc(100vh - 86px);
+  object-fit: cover;
+}
+
+/* Hidden Images */
+.hide {
+  display: none;
+}
+
+/* Previous & Next Buttons */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 4;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+
+  border: none;
+  border-radius: 50%;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+/* Previous Button */
+.prev-btn {
+    left: 25px;
+    position: absolute;
+}
+
+/* Next Button */
+.next-btn {
+  right: 25px;
+}
+
+/* Button Hover */
+.carousel button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+/* Dark Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 86px;
+  left: 0;
+
+  width: 100%;
+  height: calc(100vh - 86px);
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.45) 35%,
+    rgba(0, 0, 0, 0.15) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  z-index: 2;
+}
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  max-width: 550px;
+  z-index: 3;
+}
+
+.hero-content span{
+    color: white;
+}
+.hero-content h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Hero Button */
+.hero-btn {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  background: #1b7a4b;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 25px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #145c38;
+}
